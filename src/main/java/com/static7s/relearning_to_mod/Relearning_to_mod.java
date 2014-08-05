@@ -1,6 +1,6 @@
 package com.static7s.relearning_to_mod;
 
-//import com.static7s.relearning_to_mod.handler.ConfigurationHandler;
+import com.static7s.relearning_to_mod.handler.ConfigurationHandler;
 import com.static7s.relearning_to_mod.init.ModItems;
 //import com.static7s.relearning_to_mod.init.ModBlocks;
 import com.static7s.relearning_to_mod.reference.Reference;
@@ -39,8 +39,10 @@ public class Relearning_to_mod {
     either the client side or the server side, not both*/
 
     @Mod.EventHandler
-    public void preInit(FMLPreInitializationEvent event)
+    public void preInit(FMLPreInitializationEvent event)//Configs should be loaded here
     {
+        ConfigurationHandler.init(event.getSuggestedConfigurationFile());
+
         ModItems.init();
 
         LogHelper.INFO("Pre Initialization Complete!");
