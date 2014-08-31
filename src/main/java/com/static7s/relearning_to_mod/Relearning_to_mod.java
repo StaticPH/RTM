@@ -1,6 +1,7 @@
 package com.static7s.relearning_to_mod;
 
 import com.static7s.relearning_to_mod.handler.ConfigurationHandler;
+import com.static7s.relearning_to_mod.init.ModBlocks;
 import com.static7s.relearning_to_mod.init.ModItems;
 //import com.static7s.relearning_to_mod.init.ModBlocks;
 import com.static7s.relearning_to_mod.reference.Reference;
@@ -44,6 +45,7 @@ public class Relearning_to_mod {
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
 
         ModItems.init();
+        ModBlocks.init();
 
         LogHelper.INFO("Pre Initialization Complete!");
     }
