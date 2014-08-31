@@ -21,8 +21,8 @@ public class ConfigurationHandler {
             //read in properties from config
             configValue = configuration.get("Config Test","configValue",true,"Test config value").getBoolean(true);
         }
-        catch(Exception e)
-        {
+            catch(Exception e)
+            {
             //log the exception
         }
         finally
