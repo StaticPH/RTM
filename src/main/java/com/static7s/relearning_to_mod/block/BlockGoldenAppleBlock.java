@@ -6,13 +6,14 @@ import net.minecraft.block.material.MapColor;
 import net.minecraft.block.material.Material;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+
 import java.util.Random;
 
 public class BlockGoldenAppleBlock extends BlockRTM
 {
     public BlockGoldenAppleBlock()
     {
-        super(Material.iron);
+        super(Material.tnt);
         this.setBlockName("goldenAppleBlock");
         this.setBlockTextureName("goldenAppleBlock");
         this.setHardness(0.0F);
@@ -34,10 +35,13 @@ public class BlockGoldenAppleBlock extends BlockRTM
     {
         return Items.golden_apple;
     }
+    public int damageDropped(int meta)
+    {
+        return (1);
+    }
     public MapColor getMapColor(int p_149728_1_)
     {
         return MapColor.goldColor;
     }
-
 }
 
