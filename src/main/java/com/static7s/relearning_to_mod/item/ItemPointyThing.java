@@ -2,8 +2,10 @@ package com.static7s.relearning_to_mod.item;
 
 
 import com.static7s.relearning_to_mod.creativetab.CreativeTabRTM;
+//import com.static7s.relearning_to_mod.reference.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 //import net.minecraft.item.EnumAction;
 //import net.minecraft.item.Item;
@@ -25,15 +27,13 @@ public class ItemPointyThing extends ItemSword {
     {
         return 22;
     }
-//public int getItemEnchantability(ToolMaterial)
-//{
-//    return this.getEnchantability();
-//}
 
-
-    //   public EnumAction getItemUseAction(ItemStack par1ItemStack) {
- //       return EnumAction.block;
- //   }
+    @Override
+    @SideOnly(Side.CLIENT)
+    public void registerIcons (IIconRegister par1IconRegister)
+    {
+        this.itemIcon = par1IconRegister.registerIcon("relearning_to_mod:pointyThing");
+    }
     /**
      * allows items to add custom lines of information to the mouseover description
      */
