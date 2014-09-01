@@ -9,7 +9,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 @GameRegistry.ObjectHolder(Reference.MOD_ID)
 public class ModItems
 {
-    public static final ItemRTM pointyThing = new ItemPointyThing();
+    public static final ItemPointyThing pointyThing = new ItemPointyThing();
     public static final ItemRTM catToy = new ItemCatToy();
 
     public static void init()

@@ -11,7 +11,7 @@ import java.util.Random;
 
 public class BlockGoldenAppleBlock extends BlockRTM
 {
-    public BlockGoldenAppleBlock()
+    public BlockGoldenAppleBlock()//TODO:add a tooltip in game "Breaking this block will drop 9 'Notch' Apples"
     {
         super(Material.tnt);
         this.setBlockName("goldenAppleBlock");
