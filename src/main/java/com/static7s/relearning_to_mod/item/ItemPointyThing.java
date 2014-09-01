@@ -25,10 +25,6 @@ public class ItemPointyThing extends ItemSword {
     {
         return 22;
     }
-//public int getItemEnchantability(ToolMaterial)
-//{
-//    return this.getEnchantability();
-//}
 
 
     //   public EnumAction getItemUseAction(ItemStack par1ItemStack) {
