@@ -1,7 +1,11 @@
 #Item localizations
-item.relearning_to_mod:pointyThing.name=Pointy Thing
-itemGroup.relearning_to_mod=Relearning to Mod
-item.relearning_to_mod:catToy.name=Cat Toy
+#item.relearning_to_mod:catToy.name=Cat Toy # Do not need
+item.catToy.name=Cat Toy
+item.pointyThing.name=Pointy Thing
 
 #Block localizations
 tile.relearning_to_mod:goldenAppleBlock.name=Golden Apple Block
+
+#Creative Tabs
+itemGroup.relearning_to_mod=Relearning to Mod
+

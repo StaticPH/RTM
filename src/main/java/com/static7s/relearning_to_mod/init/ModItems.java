@@ -10,7 +10,9 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class ModItems
 {
     public static final ItemPointyThing pointyThing = new ItemPointyThing();
-    public static final ItemRTM catToy = new ItemCatToy();
+    //public static final ItemRTM catToy = new ItemCatToy(); // No longer used
+    public static final ItemCatToy catToy = new ItemCatToy();
+
 
     public static void init()
     {

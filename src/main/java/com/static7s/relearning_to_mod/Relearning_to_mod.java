@@ -4,6 +4,7 @@ import com.static7s.relearning_to_mod.handler.ConfigurationHandler;
 import com.static7s.relearning_to_mod.init.ModBlocks;
 import com.static7s.relearning_to_mod.init.ModItems;
 //import com.static7s.relearning_to_mod.init.ModBlocks;
+import com.static7s.relearning_to_mod.init.Recipes;
 import com.static7s.relearning_to_mod.reference.Reference;
 import com.static7s.relearning_to_mod.proxy.IProxy;
 import com.static7s.relearning_to_mod.utility.LogHelper;
@@ -52,6 +53,7 @@ public class Relearning_to_mod {
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
+        Recipes.init();
         LogHelper.INFO("Initialization Complete!");
     }
     @Mod.EventHandler

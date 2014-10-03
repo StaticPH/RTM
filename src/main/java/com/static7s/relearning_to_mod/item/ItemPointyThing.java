@@ -23,6 +23,23 @@ public class ItemPointyThing extends ItemSword {
         this.setUnlocalizedName("pointyThing");
 
 }
+
+    /**
+     * Checks isDamagable and if it cannot be stacked
+     */
+    public boolean isItemTool(ItemStack par1ItemStack)
+    {
+        return super.isItemTool(par1ItemStack);
+    }
+    /**
+     * True if it is a tool and has no enchantments to begin with
+     */
+//    public boolean isItemEnchantable()
+//    {
+//        return !this.getItem().isItemTool(this) ? false : !this.isItemEnchanted();
+//    }
+
+
     public int getItemEnchantability()
     {
         return 22;

@@ -8,11 +8,12 @@ import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntityFishHook;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
-public class ItemCatToy extends ItemRTM {
+public class ItemCatToy extends Item {
     @SideOnly(Side.CLIENT)
     private IIcon theIcon;
     private static final String __OBFID = "CL_00000034";
@@ -70,11 +71,18 @@ public class ItemCatToy extends ItemRTM {
         return par1ItemStack;
     }
 
+    @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(IIconRegister par1IconRegister)
     {
-        this.itemIcon = par1IconRegister.registerIcon(this.getIconString() + "_uncast");
-        this.theIcon = par1IconRegister.registerIcon(this.getIconString() + "_cast");
+//        this.itemIcon = par1IconRegister.registerIcon(this.getIconString() + "_uncast");      //Doesn't work
+//        this.theIcon = par1IconRegister.registerIcon(this.getIconString() + "_cast");        //Doesn't work
+//        this.itemIcon = par1IconRegister.registerIcon("relearning_to_mod:" + "_uncast");  //Doesn't work
+//        this.theIcon = par1IconRegister.registerIcon("relearning_to_mod:" + "_cast");    //Doesn't work
+        //this.itemIcon = par1IconRegister.registerIcon("relearning_to_mod:catToy");
+        this.itemIcon = par1IconRegister.registerIcon("relearning_to_mod:catToy_uncast");
+        this.theIcon = par1IconRegister.registerIcon("relearning_to_mod:catToy_cast");
+
     }
 
     @SideOnly(Side.CLIENT)
