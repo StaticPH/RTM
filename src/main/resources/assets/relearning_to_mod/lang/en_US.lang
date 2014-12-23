@@ -2,6 +2,9 @@
 #item.relearning_to_mod:catToy.name=Cat Toy # Do not need
 item.catToy.name=Cat Toy
 item.pointyThing.name=Pointy Thing
+item.relearning_to_mod:llamaRing.name=Llama Ring
+item.llamaRing.name=Llama Ring
+item.relearning_to_mod:snowballStick.name= Wand of Limitless Snowballs
 
 #Block localizations
 tile.relearning_to_mod:goldenAppleBlock.name=Golden Apple Block
