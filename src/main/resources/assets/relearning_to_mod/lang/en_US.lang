@@ -7,7 +7,12 @@ item.pointyThing.name=Pointy Thing
 tile.relearning_to_mod:goldenAppleBlock.name=Golden Apple Block
 tile.relearning_to_mod:stickySoulSand.name=Sticky Soul Sand
 tile.relearning_to_mod:blindingSand.name=Blinding Sand
+tile.relearning_to_mod:pressureBlock.name=Pressure Block
+tile.relearning_to_mod:redstoneWireBlock.name=Redstone Wire Block
 
+
+#Block localizations for blocks extending Vanilla blocks
+tile.pressureSensor.name=Pressure Sensor
 
 #Creative Tabs
 itemGroup.relearning_to_mod=Relearning to Mod
