@@ -15,12 +15,15 @@ public class BlockRTM extends Block
     {
         super(material);
     }
-    public BlockRTM()
+    public BlockRTM(String p_i45387_1_, Material p_i45387_2_)
     {
         super(Material.rock);
         this.setCreativeTab(CreativeTabRTM.RTM_TAB);
 
     }
+
+
+
     @Override
     public String getUnlocalizedName()
     {

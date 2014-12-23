@@ -1,4 +1,5 @@
 package com.static7s.relearning_to_mod.block;
+
 import com.static7s.relearning_to_mod.creativetab.CreativeTabRTM;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
