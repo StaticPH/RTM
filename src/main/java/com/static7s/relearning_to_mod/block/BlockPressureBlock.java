@@ -1,5 +1,5 @@
 package com.static7s.relearning_to_mod.block;
-
+//TODO: figure out what the problem is with this class
 import com.static7s.relearning_to_mod.creativetab.CreativeTabRTM;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBasePressurePlate;

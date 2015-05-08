@@ -99,3 +99,5 @@ public class ItemCatToy extends Item {
         return super.isItemTool(par1ItemStack);
     }
 }
+//TODO: FINISH; IDEA?
+//     https://github.com/SlimeKnights/TinkersConstruct/blob/22e6378e16fbc9429fd901056602f4e7158a8c2b/src/main/java/tconstruct/world/TinkerWorldEvents.java

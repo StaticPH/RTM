@@ -21,6 +21,7 @@ import net.minecraft.util.IIcon;
 import net.minecraft.world.ChunkPosition;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraftforge.common.util.ForgeDirection;
 
 
 public class BlockRedstoneWireBlock extends BlockRTM{
@@ -69,6 +70,10 @@ public class BlockRedstoneWireBlock extends BlockRTM{
     {
         return true;
     }
+//    public boolean isNormalCube(IBlockAccess world, int x, int y, int z)
+//    {
+//        return getMaterial().isOpaque() && renderAsNormalBlock();
+//    }
     public boolean isBlockSolid()
     {
         return true;
@@ -109,9 +114,16 @@ public class BlockRedstoneWireBlock extends BlockRTM{
      */
     public boolean canPlaceBlockAt(World p_149742_1_, int p_149742_2_, int p_149742_3_, int p_149742_4_)
     {
-        return World.doesBlockHaveSolidTopSurface(p_149742_1_, p_149742_2_, p_149742_3_ - 1, p_149742_4_) || p_149742_1_.getBlock(p_149742_2_, p_149742_3_ - 1, p_149742_4_) == Blocks.glowstone;
-    }
+//        return World.doesBlockHaveSolidTopSurface(p_149742_1_, p_149742_2_, p_149742_3_ - 1, p_149742_4_) || p_149742_1_.getBlock(p_149742_2_, p_149742_3_ - 1, p_149742_4_) == Blocks.glowstone;
+        return true;
 
+    }
+    public static boolean doesBlockHaveSolidTopSurface(IBlockAccess p_147466_0_, int p_147466_1_, int p_147466_2_, int p_147466_3_)
+    {
+//        Block block = p_147466_0_.getBlock(p_147466_1_, p_147466_2_, p_147466_3_);
+//        return block.isSideSolid(p_147466_0_, p_147466_1_, p_147466_2_, p_147466_3_, ForgeDirection.UP);
+        return true;
+    }
     public void func_150177_e(World p_150177_1_, int p_150177_2_, int p_150177_3_, int p_150177_4_)
     {
         this.func_150175_a(p_150177_1_, p_150177_2_, p_150177_3_, p_150177_4_, p_150177_2_, p_150177_3_, p_150177_4_);
@@ -379,7 +391,8 @@ public class BlockRedstoneWireBlock extends BlockRTM{
 
     public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)
     {
-        return Items.redstone;
+//        return Items.redstone;
+        return Item.getItemFromBlock(this);
     }
 
     public int isProvidingStrongPower(IBlockAccess p_149748_1_, int p_149748_2_, int p_149748_3_, int p_149748_4_, int p_149748_5_)
@@ -445,7 +458,33 @@ public class BlockRedstoneWireBlock extends BlockRTM{
      */
     public boolean canProvidePower()
     {
-        return this.field_150181_a;
+//        return this.field_150181_a;
+        return true;
+    }
+    /**
+     * Determine if this block can make a redstone connection on the side provided,
+     * Useful to control which sides are inputs and outputs for redstone wires.
+     *
+     * Side:
+     *  -1: UP
+     *   0: NORTH
+     *   1: EAST
+     *   2: SOUTH
+     *   3: WEST
+     *
+     * @param world The current world
+     * @param x X Position
+     * @param y Y Position
+     * @param z Z Position
+     * @param side The side that is trying to make the connection
+     * @return True to make the connection
+     */
+    public boolean canConnectRedstone(IBlockAccess world, int x, int y, int z, int side)
+    {
+        /**
+         * Can this block provide power. Only wire currently seems to have this change based on its state.
+         */
+        return canProvidePower();
     }
 
     /**
@@ -496,6 +535,10 @@ public class BlockRedstoneWireBlock extends BlockRTM{
 //    {
 //        return Items.redstone;
 //    }
+        public boolean canPlaceTorchOnTop(World world, int x, int y, int z)
+        {
+            return true;
+        }
 
     @SideOnly(Side.CLIENT)
         public Block getBlock(World p_149694_1_, int p_149694_2_, int p_149694_3_, int p_149694_4_)
