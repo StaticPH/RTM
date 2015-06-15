@@ -21,11 +21,11 @@ import java.util.Iterator;
 import java.util.List;
 import java.lang.String;
 
-public class BlockPressureSensor extends BlockBasePressurePlate {
-    public BlockPressureSensor.Sensitivity field_150069_a;
+public class BlockPressureSensorWIP extends BlockBasePressurePlate {
+    public BlockPressureSensorWIP.Sensitivity field_150069_a;
 
 
-    public BlockPressureSensor(String p_i45418_1_, Material p_i45418_2_, BlockPressureSensor.Sensitivity p_i45418_3_) {
+    public BlockPressureSensorWIP(String p_i45418_1_, Material p_i45418_2_, BlockPressureSensorWIP.Sensitivity p_i45418_3_) {
         super(p_i45418_1_, p_i45418_2_);
         this.field_150069_a = p_i45418_3_;
         this.setCreativeTab(CreativeTabRTM.RTM_TAB);
@@ -49,15 +49,15 @@ public class BlockPressureSensor extends BlockBasePressurePlate {
     public int func_150065_e(World p_150065_1_, int p_150065_2_, int p_150065_3_, int p_150065_4_) {
         List list = null;
 
-        if (this.field_150069_a == BlockPressureSensor.Sensitivity.everything) {
+        if (this.field_150069_a == BlockPressureSensorWIP.Sensitivity.everything) {
             list = p_150065_1_.getEntitiesWithinAABBExcludingEntity((Entity) null, this.func_150061_a(p_150065_2_, p_150065_3_, p_150065_4_));
         }
 
-        if (this.field_150069_a == BlockPressureSensor.Sensitivity.mobs) {
+        if (this.field_150069_a == BlockPressureSensorWIP.Sensitivity.mobs) {
             list = p_150065_1_.getEntitiesWithinAABB(EntityLivingBase.class, this.func_150061_a(p_150065_2_, p_150065_3_, p_150065_4_));
         }
 
-        if (this.field_150069_a == BlockPressureSensor.Sensitivity.players) {
+        if (this.field_150069_a == BlockPressureSensorWIP.Sensitivity.players) {
             list = p_150065_1_.getEntitiesWithinAABB(EntityPlayer.class, this.func_150061_a(p_150065_2_, p_150065_3_, p_150065_4_));
         }
 

@@ -63,7 +63,7 @@ public class Relearning_to_mod {//constructor
     }
 //    public void registerEntities ()
 //    {
-//        EntityRegistry.registerModEntity(EntityLlamaSpawner.class,"Llama Spawner", 0, instance, 32, 5, false);
+//        EntityRegistry.registerModEntity(EntityLlamaSpawnerWIP.class,"Llama Spawner", 0, instance, 32, 5, false);
 //    }
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event)

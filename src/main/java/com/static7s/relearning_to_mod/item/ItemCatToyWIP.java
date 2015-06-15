@@ -13,12 +13,12 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
-public class ItemCatToy extends Item {
+public class ItemCatToyWIP extends Item {
     @SideOnly(Side.CLIENT)
     private IIcon theIcon;
     private static final String __OBFID = "CL_00000034";
 
-    public ItemCatToy()
+    public ItemCatToyWIP()
     {
         super();
         this.setUnlocalizedName("catToy");

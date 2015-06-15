@@ -1,13 +1,19 @@
 package com.static7s.relearning_to_mod.block;
 
 import com.static7s.relearning_to_mod.creativetab.CreativeTabRTM;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.AxisAlignedBB;
+import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
+
+import java.util.List;
 
 public class BlockStickySoulSand extends BlockRTM{
 
@@ -40,4 +46,13 @@ public class BlockStickySoulSand extends BlockRTM{
             ((EntityPlayer) p_149670_5_).addPotionEffect(slowMotion);
         }
     }
+    //TODO: add tooltip to the item for this block, will likely need to do ItemBlock for it
+//    /**
+//     * allows items to add custom lines of information to the mouseover description
+//     */
+//    @SideOnly(Side.CLIENT)
+//    public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4) {
+//        par3List.add(StatCollector.translateToLocal("RTMtooltips.stickySoulSand"));
+//
+//    }
 }

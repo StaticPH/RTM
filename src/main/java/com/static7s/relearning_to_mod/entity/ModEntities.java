@@ -19,9 +19,10 @@ public class ModEntities {
         EntityList.entityEggs.put(Integer.valueOf(entityID), new EntityList.EntityEggInfo(entityID, primaryColor, secondaryColor));
     }
     public static void init() {
+        // I've copied in some lines from elsewhere to try to use as examples
 //        EntityRegistry.registerModEntity(EntityMankiniCapsule.class, "MankiniCapsule", 0, Relearning_to_mod.instance, 64, 10, true);
 //        registerEntity(EntityMankiniCreeper.class, "Mankini Creeper");
-        EntityRegistry.registerModEntity(EntityLlamaSpawner.class, "LlamaSpawner",0,Relearning_to_mod.instance,64,10,true);
+        EntityRegistry.registerModEntity(EntityLlamaSpawnerWIP.class, "LlamaSpawner",0,Relearning_to_mod.instance,64,10,true);
 //        registerEntity(EntityName.class, "Entity Name"); //TODO
     }
 }

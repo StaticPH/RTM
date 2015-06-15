@@ -12,15 +12,15 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 
-public class EntityLlamaSpawner extends EntityThrowable{
-        public EntityLlamaSpawner(World par1World, EntityPlayer par3EntityPlayer){
+public class EntityLlamaSpawnerWIP extends EntityThrowable{
+        public EntityLlamaSpawnerWIP(World par1World, EntityPlayer par3EntityPlayer){
         super(par1World);
         }
-    public EntityLlamaSpawner(World par1World, double par2, double par4, double par6) {
+    public EntityLlamaSpawnerWIP(World par1World, double par2, double par4, double par6) {
         super(par1World, par2, par4, par6);
     }
 //    private final EntityLivingBase thrower;
-//    public EntityLlamaSpawner(World par1World, EntityLivingBase par2EntityLivingBase)
+//    public EntityLlamaSpawnerWIP(World par1World, EntityLivingBase par2EntityLivingBase)
 //        {
 //                super(par1World);
 //                this.thrower = par2EntityLivingBase;

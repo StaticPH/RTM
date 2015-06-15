@@ -10,12 +10,12 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
-import com.static7s.relearning_to_mod.entity.EntityLlamaSpawner;
+import com.static7s.relearning_to_mod.entity.EntityLlamaSpawnerWIP;
 
 import java.util.List;
 
-public class ItemLlamaRing extends Item {
-    public ItemLlamaRing(){
+public class ItemLlamaRingWIP extends Item {
+    public ItemLlamaRingWIP(){
 //        this.maxStackSize = 64;
         this.maxStackSize = 1;
         this.setCreativeTab(CreativeTabRTM.RTM_TAB);
@@ -39,8 +39,8 @@ public class ItemLlamaRing extends Item {
             //TODO: switch EntitySnowball for my entity which will spawn a Llama on impact
 //            par2World.spawnEntityInWorld(new EntitySnowball(par2World, par3EntityPlayer));
 
-           // par2World.spawnEntityInWorld(new EntityLlamaSpawner(par2World, par3EntityPlayer));
-            par2World.spawnEntityInWorld(new EntityLlamaSpawner(par2World, par3EntityPlayer));
+           // par2World.spawnEntityInWorld(new EntityLlamaSpawnerWIP(par2World, par3EntityPlayer));
+            par2World.spawnEntityInWorld(new EntityLlamaSpawnerWIP(par2World, par3EntityPlayer));
         }
 
         return par1ItemStack;

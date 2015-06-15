@@ -24,12 +24,12 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 
 
-public class BlockRedstoneWireBlock extends BlockRTM{
+public class BlockRedstoneWireBlockWIP extends BlockRTM{
 
         boolean field_150181_a = true;
         Set field_150179_b = new HashSet();
 
-        public BlockRedstoneWireBlock()
+        public BlockRedstoneWireBlockWIP()
         {
             super(Material.circuits);
             this.setBlockBounds(0.0F, 0.0F, 0.0F, 1.0F, 1.0F, 1.0F);

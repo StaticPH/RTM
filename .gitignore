@@ -260,6 +260,8 @@ options.txt
 #############
 .mr.developer.cfg
 !/Minecraft Source
+#Line beginning with !/ means that if that directory was previously excluded, include it now
 /Minecraft Source/**
+#Line ending in /** means exclude this directory and everything it includes
 !/RTM
 /RTM/**

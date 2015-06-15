@@ -1,6 +1,8 @@
 package com.static7s.relearning_to_mod.block;
 //TODO: figure out what the problem is with this class
 import com.static7s.relearning_to_mod.creativetab.CreativeTabRTM;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBasePressurePlate;
 import net.minecraft.block.BlockFence;
@@ -18,9 +20,9 @@ import net.minecraft.world.World;
 
 import java.util.Random;
 
-public class BlockPressureBlock extends BlockRTM
+public class BlockPressureBlockWIP extends BlockRTM
 {
-    public BlockPressureBlock()
+    public BlockPressureBlockWIP()
     {
         super(Material.rock);
         this.setCreativeTab(CreativeTabRTM.RTM_TAB);
@@ -195,5 +197,10 @@ public class BlockPressureBlock extends BlockRTM
         }
         setBlockBounds(dim1, 1.0F, dim2, dim3, height, dim4);
     }
-
+    @Override
+    @SideOnly(Side.CLIENT)
+    public void registerBlockIcons (IIconRegister par1IconRegister)
+    {
+        this.blockIcon = par1IconRegister.registerIcon("relearning_to_mod:PressureSensor");
+    }
 }
