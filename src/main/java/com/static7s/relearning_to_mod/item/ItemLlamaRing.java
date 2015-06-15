@@ -8,6 +8,7 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 import com.static7s.relearning_to_mod.entity.EntityLlamaSpawner;
 
@@ -54,6 +55,8 @@ public class ItemLlamaRing extends Item {
      * allows items to add custom lines of information to the mouseover description
      */
     @SideOnly(Side.CLIENT)
-    public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4) {}
+    public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3list, boolean par4) {
+        par3list.add(StatCollector.translateToLocal("RTMtooltips.llamaRing"));
+    }
 
 }
