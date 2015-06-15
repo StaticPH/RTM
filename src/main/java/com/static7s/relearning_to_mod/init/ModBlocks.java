@@ -14,7 +14,7 @@ public class ModBlocks
     public static final Block pressureSensor = new BlockPressureSensor("BlockPressureSensor",Material.rock, BlockPressureSensor.Sensitivity.everything);
     public static final BlockRTM pressureBlock =new BlockPressureBlock();
     public static final BlockRTM redstoneWireBlock = new BlockRedstoneWireBlock();
-
+    public static final BlockRTM blastGlass = new BlockBlastProofGlass(CustomMaterial.blastglass);
 
     public static void init()
     {
@@ -24,6 +24,7 @@ public class ModBlocks
         GameRegistry.registerBlock(pressureSensor, "pressureSensor");
         GameRegistry.registerBlock(pressureBlock,"pressureBlock");
         GameRegistry.registerBlock(redstoneWireBlock,"redstoneWireBlock");
+        GameRegistry.registerBlock(blastGlass, "blastGlass");
 
     }
 }

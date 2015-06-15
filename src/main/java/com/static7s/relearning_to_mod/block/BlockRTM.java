@@ -9,11 +9,17 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;
 
+import com.static7s.relearning_to_mod.block.CustomMaterial;
+
 public class BlockRTM extends Block
 {
     public BlockRTM(Material material)
     {
         super(material);
+    }
+    public BlockRTM(CustomMaterial custommaterial)
+    {
+        super(custommaterial);
     }
     public BlockRTM(String p_i45387_1_, Material p_i45387_2_)
     {
