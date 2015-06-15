@@ -12,6 +12,8 @@ public class ModItems
     public static final ItemCatToy catToy = new ItemCatToy();
     public static final ItemLlamaRing llamaRing = new ItemLlamaRing();
     public static final ItemSnowballStick snowballStick = new ItemSnowballStick();
+    public static final ItemBlindingPowder blindingPowder = new ItemBlindingPowder();
+
 
     public static void init()
     {
@@ -19,6 +21,7 @@ public class ModItems
         GameRegistry.registerItem(catToy,"catToy");
         GameRegistry.registerItem(llamaRing, "llamaRing");
         GameRegistry.registerItem(snowballStick,"snowballStick");
+        GameRegistry.registerItem(blindingPowder,"blindingPowder");
     }
 
 }

@@ -5,6 +5,8 @@ item.pointyThing.name=Pointy Thing
 item.relearning_to_mod:llamaRing.name=Llama Ring
 item.llamaRing.name=Llama Ring
 item.relearning_to_mod:snowballStick.name= Wand of Limitless Snowballs
+item.relearning_to_mod:blindingPowder.name= Blinding Powder
+
 
 #Block localizations
 tile.relearning_to_mod:goldenAppleBlock.name=Golden Apple Block
@@ -20,3 +22,9 @@ tile.pressureSensor.name=Pressure Sensor
 #Creative Tabs
 itemGroup.relearning_to_mod=Relearning to Mod
 
+#Tooltips
+RTMtooltips.blindingPowder=A crafting component
+RTMtooltips.snowballStick=A wand which lets the user throw snowballs forever!
+RTMtooltips.pointyThing=Be careful or you could poke someone's eye out!
+RTMtooltips.llamaRing=Bring on the Alpacalypse!
+    #RTMtooltips.stickySoulSand=It's like fly paper!

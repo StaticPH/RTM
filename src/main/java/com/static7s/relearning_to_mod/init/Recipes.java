@@ -66,7 +66,8 @@ public class Recipes
         //GameRegistry.addRecipe(new ItemStack(ModItems.pointyThing), "f","s",'f', new ItemStack(Items.flint), 's', new ItemStack(Items.stick));// Not OreDict
         GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.blastGlass,1), new ItemStack(Blocks.glass,1), new ItemStack(Blocks.obsidian,1));
         GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.blastGlass, 8), new Object[] {Blocks.glass, Blocks.obsidian, Blocks.obsidian, Blocks.obsidian, Blocks.obsidian, Blocks.obsidian, Blocks.obsidian, Blocks.obsidian, Blocks.obsidian, });
-
+        GameRegistry.addShapelessRecipe(new ItemStack(ModItems.blindingPowder, 8), new Object[] {Items.golden_carrot, Items.fermented_spider_eye, Blocks.sand});
+        GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.blindingSand,8), new Object[] {ModItems.blindingPowder, Blocks.sand, Blocks.sand, Blocks.sand, Blocks.sand, Blocks.sand, Blocks.sand, Blocks.sand, Blocks.sand});
     }/*NOTE THAT: GameRegistry.addRecipe(new ItemStack(ModItems.pointyThing), "f","s",'f',
       new ItemStack(Items.flint),'s', new ItemStack(Items.stick)); WORKS JUST AS WELL AS THE SHAPED RECIPE VERSION FOR
       THIS PURPOSE
