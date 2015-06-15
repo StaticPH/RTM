@@ -9,10 +9,10 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntitySnowball;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+import com.static7s.relearning_to_mod.reference.Reference;
 
 import java.util.List;
 
-//TODO: Find out how to fix the rendering of the item so that it is held more like a sword
 public class ItemSnowballStick extends ItemRTM{
     public ItemSnowballStick(){
         this.maxStackSize = 1;
