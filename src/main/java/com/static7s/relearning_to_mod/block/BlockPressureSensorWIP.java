@@ -184,7 +184,7 @@ public class BlockPressureSensorWIP extends BlockBasePressurePlate {
     protected AxisAlignedBB func_150061_a(int p_150061_1_, int p_150061_2_, int p_150061_3_)
     {
         float f = 0.125F;
-        return AxisAlignedBB.getAABBPool().getAABB((double)((float)p_150061_1_ + f), (double)p_150061_2_, (double)((float)p_150061_3_ + f), (double)((float)(p_150061_1_ + 1) - f), (double)p_150061_2_ + 0.25D, (double)((float)(p_150061_3_ + 1) - f));
+        return AxisAlignedBB.getBoundingBox((double)((float)p_150061_1_ + f), (double)p_150061_2_, (double)((float)p_150061_3_ + f), (double)((float)(p_150061_1_ + 1) - f), (double)p_150061_2_ + 0.25D, (double)((float)(p_150061_3_ + 1) - f));
     }
 
     @Override

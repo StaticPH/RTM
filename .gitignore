@@ -265,3 +265,4 @@ options.txt
 #Line ending in /** means exclude this directory and everything it includes
 !/RTM
 /RTM/**
+src/main/java/com/static7s/relearning_to_mod/utility/TextureHelper.java
