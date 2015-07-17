@@ -210,7 +210,7 @@ public class EntityOcelot extends EntityTameable
 
         if (this.isTamed())
         {
-            if (par1EntityPlayer.getCommandSenderName().equalsIgnoreCase(this.getOwnerName()) && !this.worldObj.isRemote && !this.isBreedingItem(itemstack))
+            if (par1EntityPlayer.getCommandSenderName().equalsIgnoreCase(this.func_152113_b()) && !this.worldObj.isRemote && !this.isBreedingItem(itemstack))
             {
                 this.aiSit.setSitting(!this.isSitting());
             }
@@ -233,7 +233,7 @@ public class EntityOcelot extends EntityTameable
                 {
                     this.setTamed(true);
                     this.setTameSkin(1 + this.worldObj.rand.nextInt(3));
-                    this.setOwner(par1EntityPlayer.getCommandSenderName());
+                    this.func_152115_b(par1EntityPlayer.getCommandSenderName());
                     this.playTameEffect(true);
                     this.aiSit.setSitting(true);
                     this.worldObj.setEntityState(this, (byte)7);
@@ -257,7 +257,7 @@ public class EntityOcelot extends EntityTameable
 
         if (this.isTamed())
         {
-            entityocelot.setOwner(this.getOwnerName());
+            entityocelot.func_152115_b(this.func_152113_b());
             entityocelot.setTamed(true);
             entityocelot.setTameSkin(this.getTameSkin());
         }

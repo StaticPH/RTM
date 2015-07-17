@@ -22,7 +22,7 @@ import cpw.mods.fml.common.registry.EntityRegistry;
 //import org.apache.logging.log4j.Level;
 
 
-//version="1.7.2 - 1.0"
+//version="1.7.10 - 1.0"
 @Mod(modid=Reference.MOD_ID, name=Reference.MOD_NAME, version=Reference.VERSION)
 
 /*you can use the Reference classes to avoid having to write the actual values for things which are used many times.

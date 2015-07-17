@@ -14,18 +14,19 @@ buildscript {
         classpath 'net.minecraftforge.gradle:ForgeGradle:1.2-SNAPSHOT'
     }
 }
+
 apply plugin: 'forge'
 
-version = "1.7.2 - 1.0"	// Important line - used to label version number of your mod. Preferred to put the version of Minecraft the mod is for, followed by the version of the mod. THIS IS THE 2ND PART OF THE NAME OF THE JAR FILE FOR YOUR MOD.
-group= "com.static7s.relearning_to_mod" // http://maven.apache.org/guides/mini/guide-naming-conventions.html               Identifies the mod and who created it... not realy sure what this is good for, but its important.
-archivesBaseName = "relearning_to_mod"	// THIS IS THE FIRST PART OF THE NAME OF THE JAR FILE FOR YOUR MOD
+version = "1.7.10 - 1.0"  // Important line - used to label version number of your mod. Preferred to put the version of Minecraft your mod is for, followed by the version of the mod. THIS IS THE SECOND PART OF THE NAME OF THE JAR FOR YOUR MOD.
+group= "com.static7s.relearning_to_mod" // http://maven.apache.org/guides/mini/guide-naming-conventions.html        Identifies the mod and who created it... not really sure what this is good for, but its important.
+archivesBaseName = "relearning_to_mod"  //THIS IS THE FIRST PART OF THE NAME OF THE JAR FILE OF YOUR MOD.
 
 minecraft {
-    version = "1.7.2-10.12.2.1121"	// the version of Minecraft followed by the version of Minecraft Forge you are working with. Tells the build script which version of Forge to use. Changing this will change which version of Forge the build script will use, and it will automatically download the proper version if you don't already have it.
-    assetDir = "eclipse/assets"	//the directory where your decompiled stuff goes into
+    version = "1.7.10-10.13.4.1448-1.7.10"  // The version of Minecraft followed by the version of Minecraft Forge you are working with. Tells the build script which version of Forge to use. Changing this will change which version of Forge the build script uses, and will automatically download the proper version if you don't already have it.
+    runDir = "eclipse"  // The directory where your decompiled stuff goes into
 }
 
-dependencies {		// VERY USEFUL - USED TO ADD APIs AND OTHER MODS TO THE DEV ENVIRONMENT
+dependencies {      // <---- VERY USEFUL! - USED TO ADD APIS AND OTHER MODS TO THE DEV ENVIRONMENT
     // you may put jars on which you depend on in ./libs
     // or you may define them like so..
     //compile "some.group:artifact:version:classifier"
