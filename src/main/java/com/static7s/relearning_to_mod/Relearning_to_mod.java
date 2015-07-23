@@ -17,13 +17,14 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.EntityRegistry;
+import net.minecraft.entity.EntityList;
 //import org.apache.logging.log4j.LogManager;
 //import org.apache.logging.log4j.Logger;
 //import org.apache.logging.log4j.Level;
 
 
 //version="1.7.10 - 1.0"
-@Mod(modid=Reference.MOD_ID, name=Reference.MOD_NAME, version=Reference.VERSION)
+@Mod(modid=Reference.MOD_ID, name=Reference.MOD_NAME, version=Reference.VERSION, dependencies =Reference.DEPENDENCIES)
 
 /*you can use the Reference classes to avoid having to write the actual values for things which are used many times.
 Instead, you can just reference a variable stored in Reference which contains the actual value.
@@ -38,8 +39,7 @@ public class Relearning_to_mod {//constructor
     public static Relearning_to_mod instance;
 
     @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
-//    public static IProxy proxy;
-    public static CommonProxy proxy;
+    public static IProxy proxy;
     /*proxies are uses when dealing with GUIs, registering textures, and other things that only need to take place on
     either the client side or the server side, not both*/
 
@@ -47,11 +47,12 @@ public class Relearning_to_mod {//constructor
     public void preInit(FMLPreInitializationEvent event)//Configs should be loaded here
     {//method
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
-
         ModItems.init();
         ModBlocks.init();
         ModEntities.init();
-        proxy.initRenderers();
+        proxy.initRenders();
+        proxy.registerKeyBindings();
+//        proxy.registerClientEvents();
         LogHelper.INFO("Pre Initialization Complete!");
     }
     @Mod.EventHandler

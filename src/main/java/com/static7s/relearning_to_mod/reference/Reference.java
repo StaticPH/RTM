@@ -13,6 +13,7 @@ public class Reference {
     public static final String VERSION ="1.7.10 - 1.0";
     public static final String SERVER_PROXY_CLASS = "com.static7s.relearning_to_mod.proxy.ServerProxy";
     public static final String CLIENT_PROXY_CLASS = "com.static7s.relearning_to_mod.proxy.ClientProxy";
+    public static final String DEPENDENCIES = "required-after:FML";
 
             //Comments on useful names for some functions
     //func_152113_b() = getOwnerName

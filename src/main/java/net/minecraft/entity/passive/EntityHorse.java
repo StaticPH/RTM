@@ -1,5 +1,6 @@
 package net.minecraft.entity.passive;
 
+import com.static7s.relearning_to_mod.handler.ConfigurationHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -84,8 +85,10 @@ public class EntityHorse extends EntityAnimal implements IInvBasic
         this.setChested(false);
         this.getNavigator().setAvoidsWater(true);
         this.tasks.addTask(0, new EntityAISwimming(this));
-//        this.tasks.addTask(1, new EntityAIPanic(this, 1.2D));
-//        this.tasks.addTask(1, new EntityAIRunAroundLikeCrazy(this, 1.2D));
+        if (ConfigurationHandler.scaredyHorses == true) {
+            this.tasks.addTask(1, new EntityAIPanic(this, 1.2D));
+            this.tasks.addTask(1, new EntityAIRunAroundLikeCrazy(this, 1.2D));
+        }
         this.tasks.addTask(2, new EntityAIMate(this, 1.0D));
         this.tasks.addTask(4, new EntityAIFollowParent(this, 1.0D));
         this.tasks.addTask(6, new EntityAIWander(this, 0.7D));
@@ -660,7 +663,7 @@ public class EntityHorse extends EntityAnimal implements IInvBasic
      */
     protected float getSoundVolume()
     {
-        return 0.8F;
+        return ConfigurationHandler.shutupHorses;
     }
 
     /**

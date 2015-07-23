@@ -1,5 +1,7 @@
 package net.minecraft.entity.passive;
 
+import com.static7s.relearning_to_mod.Relearning_to_mod;
+import com.static7s.relearning_to_mod.handler.ConfigurationHandler;
 import net.minecraft.block.Block;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.*;
@@ -34,7 +36,9 @@ public class EntityOcelot extends EntityTameable
         this.tasks.addTask(1, new EntityAISwimming(this));
         this.tasks.addTask(2, this.aiSit);
         this.tasks.addTask(3, this.aiTempt = new EntityAITempt(this, 0.6D, Items.fish, true));
-//        this.tasks.addTask(4, new EntityAIAvoidEntity(this, EntityPlayer.class, 16.0F, 0.8D, 1.33D));
+        if (ConfigurationHandler.playersScareOcelots == true) {
+            this.tasks.addTask(4, new EntityAIAvoidEntity(this, EntityPlayer.class, 16.0F, 0.8D, 1.33D));
+        }
         this.tasks.addTask(5, new EntityAIFollowOwner(this, 1.0D, 10.0F, 5.0F));
         this.tasks.addTask(6, new EntityAIOcelotSit(this, 1.33D));
         this.tasks.addTask(7, new EntityAILeapAtTarget(this, 0.3F));
@@ -42,7 +46,9 @@ public class EntityOcelot extends EntityTameable
         this.tasks.addTask(9, new EntityAIMate(this, 0.8D));
         this.tasks.addTask(10, new EntityAIWander(this, 0.8D));
         this.tasks.addTask(11, new EntityAIWatchClosest(this, EntityPlayer.class, 10.0F));
-        this.targetTasks.addTask(1, new EntityAITargetNonTamed(this, EntityChicken.class, 750, false));
+        if (ConfigurationHandler.ocelotsHateChickens == true) {
+            this.targetTasks.addTask(1, new EntityAITargetNonTamed(this, EntityChicken.class, 750, false));
+        }
 //        this.targetTasks.addTask(1, new EntityAIWatchClosest2(EntityLiving par1EntityLiving, Class EntityFishHook.class, float par3, float par4)
 //
 //       // this.targetTasks.addTask(1, new EntityAITarget(this, EntityItem.class, 750, false) {
@@ -142,7 +148,11 @@ public class EntityOcelot extends EntityTameable
      */
     protected String getLivingSound()
     {
-        return this.isTamed() ? (this.isInLove() ? "mob.cat.purr" : (this.rand.nextInt(4) == 0 ? "mob.cat.purreow" : "mob.cat.meow")) : "";
+        if (ConfigurationHandler.catAliveNoises == true){
+            return this.isTamed() ? (this.isInLove() ? "mob.cat.purr" : (this.rand.nextInt(4) == 0 ? "mob.cat.purreow" : "mob.cat.meow")) : "";
+        }
+        else return null;
+
     }
 
     /**
@@ -150,7 +160,11 @@ public class EntityOcelot extends EntityTameable
      */
     protected String getHurtSound()
     {
-        return "mob.cat.hitt";
+        if (ConfigurationHandler.catHurtNoises == true){
+            return "mob.cat.hitt";
+        }
+        else return null;
+
     }
 
     /**
@@ -158,7 +172,10 @@ public class EntityOcelot extends EntityTameable
      */
     protected String getDeathSound()
     {
-        return "mob.cat.hitt";
+        if (ConfigurationHandler.catDeathNoises == true){
+            return "mob.cat.hitt";
+        }
+        else return null;
     }
 
     /**
@@ -166,7 +183,7 @@ public class EntityOcelot extends EntityTameable
      */
     protected float getSoundVolume()
     {
-        return 0.4F;
+        return ConfigurationHandler.shutupCats;
     }
 
     protected Item getDropItem()

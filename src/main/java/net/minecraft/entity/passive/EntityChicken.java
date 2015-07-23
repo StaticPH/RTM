@@ -1,5 +1,6 @@
 package net.minecraft.entity.passive;
 
+import com.static7s.relearning_to_mod.handler.ConfigurationHandler;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -28,7 +29,9 @@ public class EntityChicken extends EntityAnimal
         this.setSize(0.3F, 0.7F);
         this.timeUntilNextEgg = this.rand.nextInt(6000) + 6000;
         this.tasks.addTask(0, new EntityAISwimming(this));
-//        this.tasks.addTask(1, new EntityAIPanic(this, 1.4D));
+        if (ConfigurationHandler.chickenChickens == true){
+            this.tasks.addTask(1, new EntityAIPanic(this, 1.4D));
+        }
         this.tasks.addTask(2, new EntityAIMate(this, 1.0D));
         this.tasks.addTask(3, new EntityAITempt(this, 1.0D, Items.wheat_seeds, false));
         this.tasks.addTask(4, new EntityAIFollowParent(this, 1.1D));
@@ -105,7 +108,11 @@ public class EntityChicken extends EntityAnimal
      */
     protected String getLivingSound()
     {
-        return "mob.chicken.say";
+        if (ConfigurationHandler.chickenAliveNoises == true)
+        {
+            return "mob.chicken.say";
+        }
+        else return null;
     }
 
     /**
@@ -113,7 +120,11 @@ public class EntityChicken extends EntityAnimal
      */
     protected String getHurtSound()
     {
-        return "mob.chicken.hurt";
+        if (ConfigurationHandler.chickenHurtNoises == true)
+        {
+            return "mob.chicken.hurt";
+        }
+        else return null;
     }
 
     /**
@@ -121,12 +132,21 @@ public class EntityChicken extends EntityAnimal
      */
     protected String getDeathSound()
     {
-        return "mob.chicken.hurt";
+        if (ConfigurationHandler.chickenDeathNoises == true)
+        {
+            return "mob.chicken.hurt";
+        }
+        else return null;
     }
 
     protected void func_145780_a(int p_145780_1_, int p_145780_2_, int p_145780_3_, Block p_145780_4_)
     {
         this.playSound("mob.chicken.step", 0.15F, 1.0F);
+    }
+
+    protected float getSoundVolume()
+    {
+        return ConfigurationHandler.shutupChickens;
     }
 
     protected Item getDropItem()
