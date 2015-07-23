@@ -265,6 +265,7 @@ version.properties
 !/RTM
 /RTM/**
 src/main/java/com/static7s/relearning_to_mod/utility/TextureHelper.java
+>>>>>>> Temporary merge branch 2
 src/main/java/com/static7s/relearning_to_mod/handler/ConfigurationHandler_with_entities.java
 src/main/java/com/static7s/relearning_to_mod/handler/EntityJoinHandler.java
 !/relearning_to_mod/tweaks
