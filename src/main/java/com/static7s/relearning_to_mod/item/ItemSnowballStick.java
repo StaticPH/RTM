@@ -2,6 +2,7 @@ package com.static7s.relearning_to_mod.item;
 
 import com.static7s.relearning_to_mod.creativetab.CreativeTabRTM;
 //import com.static7s.relearning_to_mod.reference.Reference;
+import com.static7s.relearning_to_mod.handler.ConfigurationHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -28,7 +29,7 @@ public class ItemSnowballStick extends ItemRTM{
 //        {
 //            --par1ItemStack.stackSize;
 //        }
-
+        par3EntityPlayer.swingItem();//Make the item swing on right click
         par2World.playSoundAtEntity(par3EntityPlayer, "random.bow", 0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
 
         if (!par2World.isRemote)
@@ -54,7 +55,8 @@ public class ItemSnowballStick extends ItemRTM{
      */
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List par3List, boolean par4) {
-        par3List.add(StatCollector.translateToLocal("RTMtooltips.snowballStick"));
+        if (ConfigurationHandler.tooltipSnowballStick == true)
+            par3List.add(StatCollector.translateToLocal("RTMtooltips.snowballStick"));
 
     }
 
