@@ -1,6 +1,5 @@
 package net.minecraft.entity.passive;
 
-import com.static7s.relearning_to_mod.handler.ConfigurationHandler;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
@@ -53,10 +52,7 @@ public class EntitySheep extends EntityAnimal implements IShearable
         this.setSize(0.9F, 1.3F);
         this.getNavigator().setAvoidsWater(true);
         this.tasks.addTask(0, new EntityAISwimming(this));
-        if (ConfigurationHandler.scaredySheep == true)
-        {
-            this.tasks.addTask(1, new EntityAIPanic(this, 1.25D));
-        }
+//        this.tasks.addTask(1, new EntityAIPanic(this, 1.25D));
         this.tasks.addTask(2, new EntityAIMate(this, 1.0D));
         this.tasks.addTask(3, new EntityAITempt(this, 1.1D, Items.wheat, false));
         this.tasks.addTask(4, new EntityAIFollowParent(this, 1.1D));
@@ -106,7 +102,7 @@ public class EntitySheep extends EntityAnimal implements IShearable
     protected void entityInit()
     {
         super.entityInit();
-        this.dataWatcher.addObject(16, new Byte((byte) 0));
+        this.dataWatcher.addObject(16, new Byte((byte)0));
     }
 
     /**
@@ -174,7 +170,7 @@ public class EntitySheep extends EntityAnimal implements IShearable
     {
         super.writeEntityToNBT(par1NBTTagCompound);
         par1NBTTagCompound.setBoolean("Sheared", this.getSheared());
-        par1NBTTagCompound.setByte("Color", (byte) this.getFleeceColor());
+        par1NBTTagCompound.setByte("Color", (byte)this.getFleeceColor());
     }
 
     /**
@@ -192,11 +188,7 @@ public class EntitySheep extends EntityAnimal implements IShearable
      */
     protected String getLivingSound()
     {
-        if (ConfigurationHandler.sheepAliveNoises == true)
-        {
-            return "mob.sheep.say";
-        }
-        else return null;
+        return "mob.sheep.say";
     }
 
     /**
@@ -204,11 +196,7 @@ public class EntitySheep extends EntityAnimal implements IShearable
      */
     protected String getHurtSound()
     {
-        if (ConfigurationHandler.sheepHurtNoises == true)
-        {
-            return "mob.sheep.say";
-        }
-        else return null;
+        return "mob.sheep.say";
     }
 
     /**
@@ -216,21 +204,14 @@ public class EntitySheep extends EntityAnimal implements IShearable
      */
     protected String getDeathSound()
     {
-        if(ConfigurationHandler.sheepDeathNoises == true)
-        {
-            return "mob.sheep.say";
-        }
-        else return null;
+        return "mob.sheep.say";
     }
 
     protected void func_145780_a(int p_145780_1_, int p_145780_2_, int p_145780_3_, Block p_145780_4_)
     {
         this.playSound("mob.sheep.step", 0.15F, 1.0F);
     }
-    protected float getSoundVolume()
-    {
-        return ConfigurationHandler.shutupSheep;
-    }
+
     public int getFleeceColor()
     {
         return this.dataWatcher.getWatchableObjectByte(16) & 15;

@@ -1,6 +1,5 @@
 package net.minecraft.entity.passive;
 
-import com.static7s.relearning_to_mod.handler.ConfigurationHandler;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -21,10 +20,7 @@ public class EntityCow extends EntityAnimal
         this.setSize(0.9F, 1.3F);
         this.getNavigator().setAvoidsWater(true);
         this.tasks.addTask(0, new EntityAISwimming(this));
-        if(ConfigurationHandler.scaredyCows == true)
-        {
-            this.tasks.addTask(1, new EntityAIPanic(this, 2.0D));
-        }
+//        this.tasks.addTask(1, new EntityAIPanic(this, 2.0D));
         this.tasks.addTask(2, new EntityAIMate(this, 1.0D));
         this.tasks.addTask(3, new EntityAITempt(this, 1.25D, Items.wheat, false));
         this.tasks.addTask(4, new EntityAIFollowParent(this, 1.25D));
@@ -53,11 +49,7 @@ public class EntityCow extends EntityAnimal
      */
     protected String getLivingSound()
     {
-        if (ConfigurationHandler.cowAliveNoises == true)
-        {
-            return "mob.cow.say";
-        }
-        else return null;
+        return "mob.cow.say";
     }
 
     /**
@@ -65,11 +57,7 @@ public class EntityCow extends EntityAnimal
      */
     protected String getHurtSound()
     {
-        if (ConfigurationHandler.cowHurtNoises == true)
-        {
-            return "mob.cow.hurt";
-        }
-        else return null;
+        return "mob.cow.hurt";
     }
 
     /**
@@ -77,11 +65,7 @@ public class EntityCow extends EntityAnimal
      */
     protected String getDeathSound()
     {
-        if (ConfigurationHandler.cowDeathNoises == true)
-        {
-            return "mob.cow.hurt";
-        }
-        else return null;
+        return "mob.cow.hurt";
     }
 
     protected void func_145780_a(int p_145780_1_, int p_145780_2_, int p_145780_3_, Block p_145780_4_)
@@ -94,7 +78,7 @@ public class EntityCow extends EntityAnimal
      */
     protected float getSoundVolume()
     {
-        return ConfigurationHandler.shutupCows;
+        return 0.4F;
     }
 
     protected Item getDropItem()

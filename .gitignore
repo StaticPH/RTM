@@ -251,7 +251,6 @@ version.properties
 /.metadata/
 /config/
 /logs/
-options.txt
 /saves/
 /out
 
@@ -266,3 +265,13 @@ options.txt
 !/RTM
 /RTM/**
 src/main/java/com/static7s/relearning_to_mod/utility/TextureHelper.java
+src/main/java/com/static7s/relearning_to_mod/entity/OcelotTweaks.java
+<<<<<<< Temporary merge branch 1
+src/main/java/com/static7s/relearning_to_mod/tweaks
+=======
+src/main/java/com/static7s/relearning_to_mod/tweaks/**
+>>>>>>> Temporary merge branch 2
+src/main/java/com/static7s/relearning_to_mod/handler/ConfigurationHandler_with_entities.java
+src/main/java/com/static7s/relearning_to_mod/handler/EntityJoinHandler.java
+!/relearning_to_mod/tweaks
+src/main/java/com/static7s/relearning_to_mod/tweaks/**

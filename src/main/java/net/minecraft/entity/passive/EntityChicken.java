@@ -143,12 +143,12 @@ public class EntityChicken extends EntityAnimal
     {
         this.playSound("mob.chicken.step", 0.15F, 1.0F);
     }
-
+    
     protected float getSoundVolume()
     {
         return ConfigurationHandler.shutupChickens;
     }
-
+    
     protected Item getDropItem()
     {
         return Items.feather;

@@ -1,6 +1,5 @@
 package net.minecraft.entity.passive;
 
-import com.static7s.relearning_to_mod.handler.ConfigurationHandler;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -27,9 +26,7 @@ public class EntityPig extends EntityAnimal
         this.setSize(0.9F, 0.9F);
         this.getNavigator().setAvoidsWater(true);
         this.tasks.addTask(0, new EntityAISwimming(this));
-        if (ConfigurationHandler.scaredyPigs == true){
-            this.tasks.addTask(1, new EntityAIPanic(this, 1.25D));
-        }
+//        this.tasks.addTask(1, new EntityAIPanic(this, 1.25D));
         this.tasks.addTask(2, this.aiControlledByPlayer = new EntityAIControlledByPlayer(this, 0.3F));
         this.tasks.addTask(3, new EntityAIMate(this, 1.0D));
         this.tasks.addTask(4, new EntityAITempt(this, 1.2D, Items.carrot_on_a_stick, false));
@@ -73,7 +70,7 @@ public class EntityPig extends EntityAnimal
     protected void entityInit()
     {
         super.entityInit();
-        this.dataWatcher.addObject(16, Byte.valueOf((byte) 0));
+        this.dataWatcher.addObject(16, Byte.valueOf((byte)0));
     }
 
     /**
@@ -99,8 +96,7 @@ public class EntityPig extends EntityAnimal
      */
     protected String getLivingSound()
     {
-        if(ConfigurationHandler.pigAliveNoises == true){return "mob.pig.say";}
-        else return null;
+        return "mob.pig.say";
     }
 
     /**
@@ -108,8 +104,7 @@ public class EntityPig extends EntityAnimal
      */
     protected String getHurtSound()
     {
-       if(ConfigurationHandler.pigHurtNoises == true) {return "mob.pig.say";}
-        else return null;
+        return "mob.pig.say";
     }
 
     /**
@@ -117,18 +112,14 @@ public class EntityPig extends EntityAnimal
      */
     protected String getDeathSound()
     {
-       if(ConfigurationHandler.pigDeathNoises == true) {return "mob.pig.death";}
-        else return null;
+        return "mob.pig.death";
     }
 
     protected void func_145780_a(int p_145780_1_, int p_145780_2_, int p_145780_3_, Block p_145780_4_)
     {
         this.playSound("mob.pig.step", 0.15F, 1.0F);
     }
-    protected float getSoundVolume()
-    {
-        return ConfigurationHandler.shutupPigs;
-    }
+
     /**
      * Called when a player interacts with a mob. e.g. gets milk from a cow, gets into the saddle on a pig.
      */
