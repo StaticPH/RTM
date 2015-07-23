@@ -266,3 +266,7 @@ options.txt
 !/RTM
 /RTM/**
 src/main/java/com/static7s/relearning_to_mod/utility/TextureHelper.java
+src/main/java/com/static7s/relearning_to_mod/handler/ConfigurationHandler_with_entities.java
+src/main/java/com/static7s/relearning_to_mod/handler/EntityJoinHandler.java
+!/relearning_to_mod/tweaks
+src/main/java/com/static7s/relearning_to_mod/tweaks/**
