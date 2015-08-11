@@ -15,6 +15,10 @@ public class ModBlocks
     public static final BlockRTM pressureBlock =new BlockPressureBlockWIP();
     public static final BlockRTM redstoneWireBlock = new BlockRedstoneWireBlockWIP();
     public static final BlockRTM blastGlass = new BlockBlastProofGlass(CustomMaterial.blastglass);
+    public static final BlockRTM verticalLauncher = new BlockVerticalLauncher();
+    public static final BlockRTM springBoard = new BlockSpringBoard();
+
+
 
     public static void init()
     {
@@ -25,6 +29,10 @@ public class ModBlocks
         GameRegistry.registerBlock(pressureBlock,"pressureBlock");
         GameRegistry.registerBlock(redstoneWireBlock,"redstoneWireBlock");
         GameRegistry.registerBlock(blastGlass, "blastGlass");
+        GameRegistry.registerBlock(verticalLauncher, "verticalLauncher");
+        GameRegistry.registerBlock(springBoard, "springBoard");
+
+
 
     }
 }
